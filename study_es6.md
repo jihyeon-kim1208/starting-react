@@ -1,8 +1,24 @@
-//javascript 최신 문법 정리 (ES6, ES11)
+<!-- Heading -->
 
-//object
+# Study Day1
+
+## <!-- Line -->
+
+---
+
+##### Ellie Youtube channel
+
+### Javascript 최신문법정리 (ES6, ES11)
+
+- ES6 변수 선언
+
+> const : 값을 변경할 수 없는 변수
+> let : 변수 영역을 코드 블록 안으로 한정
+
+<!-- Code -->
+
+```js
 const student = {
-  // const : 값을 변경할 수 없는 변수 , let : 변수 영역을 코드 블록 안으로 한정
   name: "Anna",
   level: 1,
 };
@@ -21,8 +37,11 @@ const student = {
   const { name: studentName, level: studentLevel } = student;
   console.log(studentName, studentLevel);
 }
+```
 
-//array
+array
+
+```js
 const animals = ["a", "b"];
 
 {
@@ -30,7 +49,6 @@ const animals = ["a", "b"];
   const second = animals[1];
   console.log(first, second);
 }
-
 // spread syntax
 {
   const obj1 = { key: "key1" };
@@ -73,22 +91,27 @@ const animals = ["a", "b"];
     printMessage();
   }
 }
+```
 
-//ternary operator
+ternary operator : ? 을 줄임
+
+```js
 const isCat = true;
 {
   const component = isCat ? "y" : "n";
   console.log(component);
   console.log(isCat ? "y" : "n");
 }
+```
 
-//template literals
+template literals : 병합할 때 쓰임 가독성 증가
 
+```js
 {
   const weather = "sunny";
   const temperature = "16c";
 
-  console.log(`today weather is ${weather} and temperature is ${temperature}.`); // use '`' to print text
+  console.log(`today weather is ${weather} and temperature is ${temperature}.`);
 }
 
 // optional chainning (ES11)
@@ -114,8 +137,11 @@ const isCat = true;
     //printManager(person2); >> manager 존재하지 않아서 출력 X (undefined)
   }
 }
+```
 
-//nullish coalescing operator
+nullish coalescing operator
+
+```js
 {
   //logical OR operator
   //false : false, '', 0, null, undefined
@@ -142,6 +168,8 @@ const isCat = true;
     console.log(message);
   }
 
+  // 추천하는 방법 :
+  // ?? (Nullish coalescing operator) >> 숫자 0 혹은 ''(공란)일 때 나오는 버그 방지 / 왼쪽 피연산자가 null 또는 undefined 일 때 오른쪽 피연산자 반환/ 그렇지 않으면 왼쪽 피연산자 반환
   {
     const name = "";
     const userName = name ?? "Guest";
@@ -152,3 +180,4 @@ const isCat = true;
     console.log(message);
   }
 }
+```
