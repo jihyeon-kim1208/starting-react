@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+  </head>
+
+  <body>
+    <div id="content">
+      
+    </div>
+
+    <script type="text/javascript">
+      //html 요소 생성
+      const h1 = React.createElement(
+        "h1" /*태그명*/,
+        null /*속성 등*/,
+        "Hello World!" /*태그 내부내용*/
+      );
+
+      //content에다 추가해서 렌더링
+      ReactDOM.render(h1, document.getElementById("content"));
+    </script>
+  </body>
+</html>
